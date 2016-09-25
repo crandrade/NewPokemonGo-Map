@@ -141,7 +141,8 @@ function processSeen (seen) {
     lastSeen.getDate() + ' ' +
     monthArray[lastSeen.getMonth()] + ' ' +
     lastSeen.getFullYear()
-    var location = (item['latitude'] * 1).toFixed(7) + ', ' + (item['longitude'] * 1).toFixed(7)
+    //var location = (item['latitude'] * 1).toFixed(7) + ', ' + (item['longitude'] * 1).toFixed(7)
+    var location = '<a href="https://www.google.com/maps/place/'+(item['latitude'] * 1).toFixed(7) + ', ' + (item['longitude'] * 1).toFixed(7)+'" target="_blank">'+(item['latitude'] * 1).toFixed(7) + ', ' + (item['longitude'] * 1).toFixed(7)+'</a>'
     if (!$('#seen_' + item['pokemon_id']).length) {
       addElement(item['pokemon_id'], item['pokemon_name'])
     }
